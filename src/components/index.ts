@@ -1,6 +1,7 @@
 export { Card, ICardProps } from './Card/Card';
 export { CartegoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
 export { CheckBox, ICheckboxProps } from './Checkbox/Checkbox';
+export { CheckSet, CheckSetBadge, ICheckSetBadgeProps } from './CheckSetBadge/CheckSetBadge';
 export { DotsLoading, IDotsLoadingProps } from './DotsLoading/DotsLoading';
 export { Dropdown, IDropdownProps } from './Dropdown/Dropdown';
 export { ExternalLink, IExternalLinkProps } from './ExternalLink/ExternalLink';
