@@ -1,5 +1,5 @@
 export { Card, ICardProps } from './Card/Card';
-export { CartegoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
+export { CategoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
 export { CheckBox, ICheckboxProps } from './Checkbox/Checkbox';
 export { CheckSet, CheckSetBadge, ICheckSetBadgeProps } from './CheckSetBadge/CheckSetBadge';
 export { DotsLoading, IDotsLoadingProps } from './DotsLoading/DotsLoading';
