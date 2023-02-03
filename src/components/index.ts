@@ -26,4 +26,5 @@ export { IPaginationLimitOptionsProps, PaginationLimitOptions } from './Paginati
 export { ISearchbarProps, Searchbar } from './Searchbar/Searchbar';
 export { ISidebarProps, Sidebar } from './Sidebar/Sidebar';
 export { ISortOptionsProps, SortOptions } from './SortOptions/SortOptions';
+export { ITabProps, ITabsProps, Tabs } from './Tabs/Tabs';
 export { IThemeModeProps, ThemeMode } from './ThemeMode/ThemeMode';
