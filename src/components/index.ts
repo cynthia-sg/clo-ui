@@ -1,3 +1,4 @@
+export { Alert, AlertController } from './AlertController/AlertController';
 export { Card, ICardProps } from './Card/Card';
 export { CategoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
 export { CheckBox, ICheckboxProps } from './Checkbox/Checkbox';

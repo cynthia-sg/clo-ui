@@ -18,7 +18,7 @@ export interface ITabProps {
   content: JSX.Element;
 }
 
-export const Tabs = (props: ITabsProps) => {
+export const Tabs = React.memo(function Tabs(props: ITabsProps) {
   const [activeTab, setActiveTab] = useState(props.active);
   const [visibleContent, setVisibleContent] = useState<JSX.Element | undefined>();
 
@@ -62,6 +62,4 @@ export const Tabs = (props: ITabsProps) => {
       </div>
     </>
   );
-};
-
-export default memo(Tabs);
+});
