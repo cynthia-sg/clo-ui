@@ -1,4 +1,6 @@
+import { BlockCodeButtons, IBlockCodeButtonsProps } from './BlockCodeButtons/BlockCodeButtons';
 export { Alert, AlertController } from './AlertController/AlertController';
+export { ButtonCopyToClipboard, IButtonCopyToClipboardProps } from './ButtonCopyToClipboard/ButtonCopyToClipboard';
 export { Card, ICardProps } from './Card/Card';
 export { CategoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
 export { CheckBox, ICheckboxProps } from './Checkbox/Checkbox';
