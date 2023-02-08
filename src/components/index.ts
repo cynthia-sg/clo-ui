@@ -1,10 +1,11 @@
-import { BlockCodeButtons, IBlockCodeButtonsProps } from './BlockCodeButtons/BlockCodeButtons';
 export { Alert, AlertController } from './AlertController/AlertController';
+export { BlockCodeButtons, IBlockCodeButtonsProps } from './BlockCodeButtons/BlockCodeButtons';
 export { ButtonCopyToClipboard, IButtonCopyToClipboardProps } from './ButtonCopyToClipboard/ButtonCopyToClipboard';
 export { Card, ICardProps } from './Card/Card';
 export { CategoryBadge, ICategoryBadgeProps } from './CategoryBadge/CategoryBadge';
 export { CheckBox, ICheckboxProps } from './Checkbox/Checkbox';
 export { CheckSet, CheckSetBadge, ICheckSetBadgeProps } from './CheckSetBadge/CheckSetBadge';
+export { CodeBlock, ICodeBlockProps } from './CodeBlock/CodeBlock';
 export { DotsLoading, IDotsLoadingProps } from './DotsLoading/DotsLoading';
 export { Dropdown, IDropdownProps } from './Dropdown/Dropdown';
 export { ExternalLink, IExternalLinkProps } from './ExternalLink/ExternalLink';
