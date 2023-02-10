@@ -31,6 +31,7 @@ export { INavbarProps, Navbar } from './Navbar/Navbar';
 export { INoDataProps, NoData } from './NoData/NoData';
 export { IPaginationProps, Pagination } from './Pagination/Pagination';
 export { IPaginationLimitOptionsProps, PaginationLimitOptions } from './PaginationLimitOptions/PaginationLimitOptions';
+export { ISampleQueriesProps, SampleQueries, SampleQuery } from './SampleQueries/SampleQueries';
 export { ISearchbarProps, Searchbar } from './Searchbar/Searchbar';
 export { ISidebarProps, Sidebar } from './Sidebar/Sidebar';
 export { ISortOptionsProps, SortOptions } from './SortOptions/SortOptions';

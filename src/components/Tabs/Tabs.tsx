@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, { memo, MouseEvent as ReactMouseEvent, useEffect, useState } from 'react';
+import React, { MouseEvent as ReactMouseEvent, useEffect, useState } from 'react';
 
 import { NoData } from '../NoData/NoData';
 import styles from './Tabs.module.css';
