@@ -3,7 +3,7 @@ import isNull from 'lodash/isNull';
 import React, { useState } from 'react';
 
 import styles from './AlertController.module.css';
-import alertDispatcher from './alertDispatcher';
+import { alertDispatcher } from './alertDispatcher';
 
 export interface Alert {
   type: 'success' | 'danger' | 'warning' | 'info';
