@@ -4,11 +4,11 @@ import { Alert } from './AlertController';
 
 const DEFAULT_TIME = 5 * 1000; //5s
 
-export interface AlertUpdatesHandler {
+interface AlertUpdatesHandler {
   updateAlertWrapper(alert: Alert | null): void;
 }
 
-export class AlertDispatcher {
+class AlertDispatcher {
   private updatesHandler?: AlertUpdatesHandler;
   private visibleAlert: Alert | null = null;
   private timeout?: NodeJS.Timeout;
@@ -41,5 +41,4 @@ export class AlertDispatcher {
   }
 }
 
-const alertDispatcher = new AlertDispatcher();
-export default alertDispatcher;
+export const alertDispatcher = new AlertDispatcher();

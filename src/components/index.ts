@@ -1,4 +1,5 @@
 export { Alert, AlertController } from './AlertController/AlertController';
+export { alertDispatcher } from './AlertController/alertDispatcher';
 export { BlockCodeButtons, IBlockCodeButtonsProps } from './BlockCodeButtons/BlockCodeButtons';
 export { ButtonCopyToClipboard, IButtonCopyToClipboardProps } from './ButtonCopyToClipboard/ButtonCopyToClipboard';
 export { Card, ICardProps } from './Card/Card';
