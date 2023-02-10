@@ -8,6 +8,7 @@ export { CheckSet, CheckSetBadge, ICheckSetBadgeProps } from './CheckSetBadge/Ch
 export { CodeBlock, ICodeBlockProps } from './CodeBlock/CodeBlock';
 export { DotsLoading, IDotsLoadingProps } from './DotsLoading/DotsLoading';
 export { Dropdown, IDropdownProps } from './Dropdown/Dropdown';
+export { DropdownOnHover, IDropdownOnHoverProps } from './DropdownOnHover/DropdownOnHover';
 export { ElementWithTooltip, IElementWithTooltipProps } from './ElementWithTooltip/ElementWithTooltip';
 export { ExternalLink, IExternalLinkProps } from './ExternalLink/ExternalLink';
 export {
