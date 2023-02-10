@@ -19,6 +19,7 @@ export {
 export { Footer, IFooterProps } from './Footer/Footer';
 export { Foundation, FoundationBadge, FOUNDATIONS, IFoundationBadgeProps } from './FoundationBadge/FoundationBadge';
 export { GenericBadge, IGenericBadgeProps } from './GenericBadge/GenericBadge';
+export { HoverableItem, IHoverableItemProps } from './HoverableItem/HoverableItem';
 export { IImageProps, Image } from './Image/Image';
 export { ILoadingProps, Loading } from './Loading/Loading';
 export { IMaturityBadgeProps, Maturity, MaturityBadge } from './MaturityBadge/MaturityBadge';

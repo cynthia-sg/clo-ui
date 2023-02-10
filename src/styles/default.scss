@@ -50,15 +50,15 @@ main {
   line-height: 1.65rem;
 }
 
-.was-validated .form-check-input:valid~.form-check-label,
-.form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label,
-.form-check-input.is-valid~.form-check-label {
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
   color: var(--color-font);
 }
 
-.was-validated .form-check-input:valid:checked~.form-check-label:before,
-.form-check-input.is-valid:checked~.form-check-label:before {
+.was-validated .form-check-input:valid:checked ~ .form-check-label:before,
+.form-check-input.is-valid:checked ~ .form-check-label:before {
   border-color: var(--highlighted) !important;
   background-color: var(--highlighted);
 }
@@ -287,7 +287,7 @@ a,
   color: var(--color-font);
 }
 
-.table> :not(:first-child) {
+.table > :not(:first-child) {
   border-top-color: inherit;
 }
 
@@ -321,7 +321,6 @@ a,
 }
 
 @media only screen and (max-width: 991.98px) {
-
   .noScroll-sidebar.noScroll-lg,
   .noScroll-modal.noScroll-lg {
     overflow: auto !important;
@@ -329,7 +328,6 @@ a,
 }
 
 @media only screen and (max-width: 767.98px) {
-
   .noScroll-sidebar.noScroll-md,
   .noScroll-modal.noScroll-md {
     overflow: auto !important;
@@ -337,7 +335,6 @@ a,
 }
 
 @media only screen and (max-width: 575.98px) {
-
   .noScroll-sidebar.noScroll-sm,
   .noScroll-modal.noScroll-sm {
     overflow: auto !important;
