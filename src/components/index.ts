@@ -35,6 +35,7 @@ export { ISampleQueriesProps, SampleQueries, SampleQuery } from './SampleQueries
 export { ISearchbarProps, Searchbar } from './Searchbar/Searchbar';
 export { ISidebarProps, Sidebar } from './Sidebar/Sidebar';
 export { ISortOptionsProps, SortOptions } from './SortOptions/SortOptions';
+export { ISubNavbarProps, SubNavbar } from './SubNavbar/SubNavbar';
 export { ITabProps, ITabsProps, Tabs } from './Tabs/Tabs';
 export { IThemeModeProps, ThemeMode } from './ThemeMode/ThemeMode';
 export { ITimelineProps, Timeline } from './Timeline/Timeline';
