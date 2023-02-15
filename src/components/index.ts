@@ -37,3 +37,4 @@ export { ISidebarProps, Sidebar } from './Sidebar/Sidebar';
 export { ISortOptionsProps, SortOptions } from './SortOptions/SortOptions';
 export { ITabProps, ITabsProps, Tabs } from './Tabs/Tabs';
 export { IThemeModeProps, ThemeMode } from './ThemeMode/ThemeMode';
+export { ITimelineProps, Timeline } from './Timeline/Timeline';
