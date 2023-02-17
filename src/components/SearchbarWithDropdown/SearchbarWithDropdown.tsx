@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import { isNull } from 'lodash';
-import React, { ChangeEvent, Dispatch, KeyboardEvent, SetStateAction, useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import { IoCloseSharp } from 'react-icons/io5';
-import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import useBreakpointDetect from '../../hooks/useBreakpointDetect';
 import useOutsideClick from '../../hooks/useOutsideClick';
@@ -14,19 +13,18 @@ import { RoundScore } from '../RoundScore/RoundScore';
 import styles from './SearchbarWithDropdown.module.css';
 
 export interface ISearchbarWithDropdownProps {
-  setScrollPosition: Dispatch<SetStateAction<number | undefined>>;
-  classNameWrapper?: string;
   effective_theme: string;
-  prepareQueryString: (items: any) => string;
   searchProjects: (text: string) => Promise<{ items: any[]; 'Pagination-Total-Count': string }>;
+  onCleanSearchValue: () => void;
+  onSearch: (value: string) => void;
+  openProject: (foundation: string, projectName: string) => void;
+  searchParams: URLSearchParams;
 }
 
 const SEARCH_DELAY = 3 * 100; // 300ms
 const MIN_CHARACTERS_SEARCH = 2;
 
 export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
   const inputEl = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef(null);
   const [value, setValue] = useState<string>('');
@@ -77,7 +75,7 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
     forceBlur();
     setValue('');
     cleanProjectsSearch();
-    navigate(`/projects/${selectedProject.foundation}/${selectedProject.name}`);
+    props.openProject(selectedProject.foundation, selectedProject.name);
   };
 
   const forceBlur = (): void => {
@@ -93,18 +91,9 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
   };
 
   const search = () => {
-    props.setScrollPosition(0);
+    props.onSearch(value);
     cleanTimeout();
     cleanProjectsSearch();
-
-    navigate({
-      pathname: '/search',
-      search: props.prepareQueryString({
-        pageNumber: 1,
-        text: value,
-        filters: {},
-      }),
-    });
     forceBlur();
   };
 
@@ -117,15 +106,7 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
 
   const cleanSearchValue = () => {
     if (currentSearch === value) {
-      props.setScrollPosition(0);
-      navigate({
-        pathname: '/search',
-        search: props.prepareQueryString({
-          pageNumber: 1,
-          text: '',
-          filters: {},
-        }),
-      });
+      props.onCleanSearchValue();
     } else {
       setValue('');
     }
@@ -161,13 +142,6 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
 
   async function searchProjects() {
     try {
-      // const searchResults = await API.searchProjects({
-      //   limit: 5,
-      //   offset: 0,
-      //   text: value,
-      //   sort_by: DEFAULT_SORT_BY,
-      //   sort_direction: DEFAULT_SORT_DIRECTION,
-      // });
       const searchResults = await props.searchProjects(value);
       const total = parseInt(searchResults['Pagination-Total-Count']);
       if (total > 0) {
@@ -189,10 +163,10 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
   }
 
   useEffect(() => {
-    const text = searchParams.get('text');
+    const text = props.searchParams.get('text');
     setValue(text || '');
     setCurrentSearch(text);
-  }, [searchParams]);
+  }, [props.searchParams]);
 
   useEffect(() => {
     // Don't display search options for mobile devices
@@ -219,7 +193,7 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
   }, [value]); /* eslint-disable-line react-hooks/exhaustive-deps */
 
   return (
-    <div className={`position-relative ${props.classNameWrapper}`}>
+    <>
       <div
         className={`d-flex align-items-center overflow-hidden searchBar lh-base bg-white mx-auto ${styles.searchBar} search`}
       >
@@ -345,6 +319,6 @@ export const SearchbarWithDropdown = (props: ISearchbarWithDropdownProps) => {
           </HoverableItem>
         </div>
       )}
-    </div>
+    </>
   );
 };
