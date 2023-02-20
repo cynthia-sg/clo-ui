@@ -1,6 +1,5 @@
 import { isUndefined, sampleSize } from 'lodash';
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 
 export interface ISampleQueriesProps {
   queries: SampleQuery[];
@@ -22,16 +21,15 @@ export const SampleQueries = React.memo(function SampleQueries(props: ISampleQue
     <>
       {queries.map((query: SampleQuery, index: number) => (
         <Fragment key={`sampleQuery_${index}`}>
-          <Link
+          <a
             className={`badge rounded-0 border fw-normal mx-2 mt-3 text-decoration-none ${props.className}`}
-            to={{
-              pathname: '/search',
-              search: props.prepareQueryString(query.filters),
-            }}
+            href={`/search${props.prepareQueryString(query.filters)}`}
+            target="_self"
+            rel="noopener noreferrer"
             aria-label={`Filter by ${query.name}`}
           >
             {query.name}
-          </Link>
+          </a>
           {!isUndefined(props.lineBreakIn) && index === props.lineBreakIn - 1 && (
             <div className="d-block w-100" data-testid="sampleQueryBreakLine" />
           )}

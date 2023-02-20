@@ -26,7 +26,6 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.8.1",
     "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
