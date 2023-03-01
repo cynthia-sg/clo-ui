@@ -1,1 +1,3 @@
-export { getMetaTag } from './getMetaTag';
+import { getMetaTag } from './getMetaTag';
+
+export const utils = { getMetaTag };
